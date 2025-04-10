@@ -6,6 +6,15 @@ Verificamos dependencias e instalciones
 Prendemos el servidor
 Verificamos en postman (opcional ensayar los json sugeridos)
 
+# Enpoints
+
+http://localhost:8085/platon-api/cursos - GET
+http://localhost:8085/platon-api/cursos - POST
+http://localhost:8085/platon-api/cursos?nombre=ingenieria - GET
+http://localhost:8085/platon-api/cursos?nombre=salud - GET
+
+
+
 ## Json que puedes ensayar para pruebas
 
 ### Exitosas
@@ -17,7 +26,7 @@ Verificamos en postman (opcional ensayar los json sugeridos)
     "profesor": "Diana Gómez",
     "cupoMaximo": 30,
     "estudiantesInscritos": 0,
-    "facultad": "Ingenierías"
+    "facultad": "ingenierias"
 }
 
 ---
@@ -28,7 +37,7 @@ Verificamos en postman (opcional ensayar los json sugeridos)
     "profesor": "Oscar Mesa",
     "cupoMaximo": 40,
     "estudiantesInscritos": 0,
-    "facultad": "Ingenieria"
+    "facultad": "ingenierias"
 }
 
 ---
@@ -55,7 +64,7 @@ codigo duplicado
     "profesor": "Norberto",
     "cupoMaximo": 25,
     "estudiantesInscritos": 0,
-    "facultad": "Ingenierías"
+    "facultad": "ingenierias"
 }
 ---
 
@@ -67,7 +76,7 @@ cupo maximo menor a 0
     "profesor": "Maryem",
     "cupoMaximo": 0,
     "estudiantesInscritos": 0,
-    "facultad": "Ingenierías"
+    "facultad": "ingenierias"
 }
 
 Elaborado por Juan Estiven Posada Rua
