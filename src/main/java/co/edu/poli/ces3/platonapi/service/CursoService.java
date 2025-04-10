@@ -8,9 +8,9 @@ public class CursoService {
     private static List<Curso> cursos = new ArrayList<>();
 
     public boolean agregarCurso(Curso nuevo) {
-        // validacion curso diferente nombre
+        // validacion curso diferente codigo
         for (Curso c : cursos) {
-            if (c.getNombre().equalsIgnoreCase(nuevo.getNombre())) {
+            if (c.getCodigo().equalsIgnoreCase(nuevo.getCodigo())) {
                 return false;
             }
         }
