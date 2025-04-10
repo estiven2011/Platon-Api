@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/cursos")
@@ -56,10 +57,16 @@ public class CursoServlet extends HttpServlet {
         // Trae el valor de nombre de la facultad
         String facultad = request.getParameter("nombre");
 
-        List<Curso> cursos;
+        List<Curso> cursos = new ArrayList<>();
 
         if (facultad != null) {
             cursos = cursoService.buscarCursosPorFacultad(facultad);
+
+            if (cursos.isEmpty()) {
+                response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+                out.println("No se encontraron cursos para esta facultad");
+                return;
+            }
         } else {
             cursos = cursoService.listarTodos();
         }
